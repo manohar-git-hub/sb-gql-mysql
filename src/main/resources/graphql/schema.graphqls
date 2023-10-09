@@ -1,0 +1,25 @@
+schema{
+query:Query
+mutation:Mutation
+}
+
+type Query{
+getUsers:[User]
+}
+
+type User{
+id:Int!
+name:String!
+role:String!
+password:String!
+}
+
+type Mutation{
+addUser(user: UserObj):String
+}
+
+input UserObj{
+name:String!
+role:String!
+password:String!
+}
